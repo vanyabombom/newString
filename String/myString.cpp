@@ -55,7 +55,18 @@ MyString::~MyString()
 {
 	delete[] str;
 }
+MyString::MyString(initializer_list<char> list)
+{
+	length = list.size();
+	str = new char[length + 1];
 
+	int index = 0;
+	for (auto i = list.begin(); i != list.end(); ++i)
+	{
+		str[index++] = *i;
+	}
+	str[length] = '\0'; 
+}
 
 void MyString::MyStrcpy(MyString& obj)
 {

@@ -12,6 +12,7 @@ public:
 	MyString(const char* InitString);
 	MyString(const MyString& obj2);
 	~MyString();
+	MyString(initializer_list<char> list);
 	void MyStrcpy(MyString& obj);
 	bool MyStrStr(const char* subString);
 	int MyChar(char symbol);

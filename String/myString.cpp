@@ -310,5 +310,17 @@ MyString& MyString::operator+=(const char* addedText)
 	length += addLength;
 	return *this;
 }
+void MyString::Save(char* name)
+{
+	if (name == nullptr or str == nullptr)
+	{
+		return;
+	}
+
+	ofstream file(name);
+	str >> file;
+
+	file.close();
+}
 
 

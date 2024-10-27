@@ -25,8 +25,11 @@ public:
 	MyString(MyString&& obj);
 	MyString& operator=(MyString&& obj);
 	MyString& operator+=(const char* addition);
+	void Save(char* name);
 	//friend ostream& operator<<(ostream& os, MyString obj);
 	//friend istream& operator>>(istream& is, MyString& obj);
+
+
 };
 
 //ostream& operator<<(ostream& os, MyString obj);
